@@ -115,17 +115,17 @@ Create the application's visual foundation before implementing health-specific f
 
 ### Tasks
 
-- [ ] Create application layout
-- [ ] Create navigation
-- [ ] Create sidebar/navigation menu
-- [ ] Create responsive layout
-- [ ] Create dashboard shell
+- [x] Create application layout
+- [x] Create navigation
+- [x] Create sidebar/navigation menu
+- [x] Create responsive layout
+- [x] Create dashboard shell
 - [ ] Create authentication page shell
 - [ ] Create loading state components
 - [ ] Create error state components
 - [ ] Create empty state components
 - [ ] Configure notification/toast behavior
-- [ ] Establish reusable Bootstrap-based UI patterns
+- [x] Establish reusable Bootstrap-based UI patterns
 
 The application should be usable for navigation even before the health-tracking functionality is complete.
 
@@ -628,19 +628,43 @@ A partially implemented feature should not be marked complete.
 ```text
 Milestone 0 — Project Foundation
 
-[x] Project directory created
-[x] Git initialized
-[x] Main branch configured
-[x] Documentation structure created
-[x] RULES.md
-[x] ARCHITECTURE.md
-[x] DATA-MODEL.md
-[x] API.md
-[x] GOOGLE-SHEETS.md
-[ ] ROADMAP.md
-[ ] README.md
-[ ] Initial Git commit
-[ ] GitHub repository
+[x] Project foundation completed
+[x] Documentation created
+[x] Git repository initialized
+[x] GitHub repository created
+[x] Initial commit created
+[x] Project pushed to GitHub
+
+Milestone 1 — Application Infrastructure
+[x] React + Vite frontend
+[x] React Bootstrap + Bootstrap
+[x] React Router
+[x] Frontend folder structure
+[x] Frontend environment configuration
+[x] Node.js + Express backend
+[x] TypeScript configuration
+[x] Backend folder structure
+[x] Environment configuration
+[x] Health-check endpoint
+[x] CORS configuration
+[x] Security middleware
+[x] Frontend/backend integration
+[x] Local API communication
+[x] Development scripts
+
+Milestone 2 — Frontend Application Shell
+[x] Application layout
+[x] Navigation
+[x] Responsive sidebar/navigation
+[x] Dashboard shell
+[x] Blood Pressure route
+[x] 404 handling
+[x] Reusable Bootstrap-based UI patterns
+[ ] Authentication page shell
+[ ] Loading state components
+[ ] Error state components
+[ ] Empty state components
+[ ] Notification/toast behavior
 ```
 
 Current focus:

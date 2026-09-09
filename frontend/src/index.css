@@ -6,4 +6,9 @@ body,
 
 body {
   margin: 0;
+  background-color: #f8f9fa;
+}
+
+.nav-link.active {
+  font-weight: 600;
 }
