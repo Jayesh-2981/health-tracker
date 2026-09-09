@@ -1,0 +1,62 @@
+# Dependencies
+
+node_modules/
+
+# Environment variables and secrets
+
+.env
+.env.*
+!.env.example
+
+# Build output
+
+dist/
+build/
+
+# Test and coverage output
+
+coverage/
+
+# Logs
+
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Runtime files
+
+*.pid
+*.pid.lock
+
+# OS files
+
+.DS_Store
+Thumbs.db
+
+# IDE / editor files
+
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+
+# Temporary files
+
+*.tmp
+*.temp
+
+# Local development files
+
+*.local
+
+# Generated files
+
+.cache/
+.parcel-cache/
+
+# Google / OAuth local credentials
+
+credentials.json
+token.json
+tokens.json
