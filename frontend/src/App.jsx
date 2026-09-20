@@ -1,14 +1,7 @@
-import { Container } from "react-bootstrap";
-
+import { RouterProvider } from "react-router-dom";
+import router from "./routes/router.jsx";
 function App() {
-  return (
-    <Container className="py-4">
-      <h1>Health Tracker</h1>
-      <p className="text-muted mb-0">
-        Your health data, organized in one place.
-      </p>
-    </Container>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
