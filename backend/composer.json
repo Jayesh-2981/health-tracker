@@ -1,0 +1,16 @@
+{
+    "name": "health-tracker/backend",
+    "description": "PHP backend API for Health Tracker",
+    "autoload": {
+        "psr-4": {
+            "HealthTracker\\Backend\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jayesh",
+            "email": "jadhavjayesh949@gmail.com"
+        }
+    ],
+    "require": {}
+}
