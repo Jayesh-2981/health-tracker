@@ -106,6 +106,64 @@ final class AuthController
         ]);
     }
 
+    public function me(): never
+    {
+
+        $this->startSession();
+
+        $user = $_SESSION['authenticated_user'] ?? null;
+
+        if (!is_array($user)) {
+            Response::json(
+                [
+                    'success' => false,
+                    'error' => [
+                        'code' => 'UNAUTHENTICATED',
+                        'message' => 'Authentication is required.',
+                    ],
+                ],
+                401,
+            );
+        }
+
+        Response::json([
+            'success' => true,
+            'data' => [
+                'user' => $user,
+            ],
+        ]);
+    }
+
+    public function logout(): never
+    {
+        $this->startSession();
+
+        $_SESSION = [];
+
+        if (ini_get('session.use_cookies')) {
+            $params = session_get_cookie_params();
+
+            setcookie(
+                session_name(),
+                '',
+                time() - 42000,
+                $params['path'],
+                $params['domain'],
+                $params['secure'],
+                $params['httponly'],
+            );
+        }
+
+        session_destroy();
+
+        Response::json([
+            'success' => true,
+            'data' => [
+                'message' => 'Logout successful.',
+            ],
+        ]);
+    }
+
     private function startSession(): void
     {
         if (session_status() === PHP_SESSION_NONE) {

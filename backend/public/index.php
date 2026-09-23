@@ -41,4 +41,14 @@ $router->get(
     [$authController, 'googleCallback'],
 );
 
+$router->get(
+    '/api/v1/auth/me',
+    [$authController, 'me'],
+);
+
+$router->post(
+    '/api/v1/auth/logout',
+    [$authController, 'logout'],
+);
+
 $router->dispatch($request);
