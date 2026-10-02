@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace HealthTracker\Backend\Controllers;
 
+use HealthTracker\Backend\Config;
 use HealthTracker\Backend\Http\Response;
 use HealthTracker\Backend\Services\GoogleOAuthService;
 
@@ -97,13 +98,15 @@ final class AuthController
             'picture' => $googleUser['picture'] ?? null,
         ];
 
-        Response::json([
-            'success' => true,
-            'data' => [
-                'message' => 'Google authentication successful.',
-                'user' => $_SESSION['authenticated_user'],
-            ],
-        ]);
+        $frontendUrl = Config::get('FRONTEND_URL');
+
+        if ($frontendUrl === null || $frontendUrl === '') {
+            throw new \RuntimeException('FRONTEND_URL is not configured.');
+        }
+
+        header('Location: ' . $frontendUrl . '/', true, 302);
+
+        exit;
     }
 
     public function me(): never
